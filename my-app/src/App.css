@@ -1,0 +1,23 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.board {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+.row {
+	display: flex;
+	gap: 15px;
+}
+.col {
+	border: solid #3b3b3b 1px;
+	font-size: 2rem;
+	padding: 5px 10px;
+	border-radius: 5px;
+	width: 40px;
+	height: 40px;
+}
