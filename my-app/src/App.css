@@ -3,21 +3,47 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	color: white;
+	background-color: #000519;
+	height: 100vh;
 }
 .board {
 	display: flex;
 	flex-direction: column;
 	gap: 5px;
+	background-color: white;
+	color: #000519;
+	border-radius: 10px;
+	padding: 10px;
 }
 .row {
 	display: flex;
-	gap: 15px;
+	gap: 10px;
 }
 .col {
-	border: solid #3b3b3b 1px;
+	border: solid #bbbbbb 2px;
 	font-size: 2rem;
 	padding: 5px 10px;
 	border-radius: 5px;
-	width: 40px;
+	width: 30px;
 	height: 40px;
+	text-align: center;
+	text-transform: capitalize;
+}
+.col.fillGreen {
+	background-color: rgb(174, 244, 146);
+}
+.col.fillYellow {
+	background-color: rgb(255, 255, 146);
+}
+.col.fillGray {
+	background-color: rgb(213, 213, 213);
+}
+.col.azul {
+	border: solid #3b3b3b 2px;
+}
+.col.win {
+	background-color: rgb(174, 244, 146);
+	border: solid rgb(15, 57, 0) 2px;
+	color: rgb(15, 57, 0);
 }

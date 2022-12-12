@@ -1,20 +1,23 @@
 type Props = {
-	allGuesses: string[];
-	WORDS_LENGTH: string[];
-	currentArrayWord: string[];
+	board: { char: string; color: string }[][];
+	guessCounter: number;
+	win: boolean;
 };
-export default function Board({
-	allGuesses,
-	WORDS_LENGTH,
-	currentArrayWord,
-}: Props) {
+export default function Board({ board, guessCounter, win }: Props) {
 	return (
-		<div className='board'>
-			{allGuesses.map((guess, idx) => (
-				<div key={idx} className='row'>
-					{guess !== ""
-						? currentArrayWord.map((col) => <div className='col'>{col}</div>)
-						: WORDS_LENGTH.map((col) => <div className='col'>{col}</div>)}
+		<div className='board' style={{ marginTop: "2rem" }}>
+			{board.map((row, idx) => (
+				<div key={idx + Math.floor(Math.random() * 100000)} className='row'>
+					{row.map((col, idx2) => (
+						<div
+							key={idx2 + Math.floor(Math.random() * 100000)}
+							className={`col ${guessCounter === idx ? "azul" : null} ${
+								col.color
+							}`}
+						>
+							{col.char}
+						</div>
+					))}
 				</div>
 			))}
 		</div>
